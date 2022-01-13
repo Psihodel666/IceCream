@@ -1,0 +1,127 @@
+.hero {
+  background-color: #ffb8ca;
+  padding-top: 92px;
+
+  &__wrapper {
+    position: relative;
+    // display: flex;
+    // justify-content: space-between;
+  }
+
+  &__left {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    // margin-top: 193px;
+    padding-top: 110px;
+    margin-bottom: 19px;
+    max-width: 218px;
+
+    font-family: Titan One;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: var(--white-txt-color);
+
+    &--red {
+      font-size: 48px;
+      line-height: 96.5%;
+      color: var(--title-color);
+    }
+  }
+
+  &__list {
+    display: flex;
+    padding-bottom: 160px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__btn--red {
+    padding: 7px 14px;
+    background: var(--button-bg-color);
+    border-radius: 20px;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    border: none;
+
+    color: var(--white-txt-color);
+  }
+
+  &__btn--white {
+    padding: 7px 14px;
+    background: var(--white-txt-color);
+    border-radius: 20px;
+
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    border: none;
+
+    color: var(--button-txt-color);
+  }
+
+  //   &__bottom {
+  //     display: flex;
+  //     align-items: center;
+  //   }
+
+  //   &__image1 {
+  //     margin-right: 30px;
+  //   }
+
+  //   &__text {
+  //     width: 200px;
+  //     margin-bottom: 20px;
+
+  //     font-family: DM Sans;
+  //     font-style: normal;
+  //     font-weight: normal;
+  //     font-size: 14px;
+  //     line-height: 140%;
+  //     /* or 20px */
+
+  //     color: #ffffff;
+  //   }
+
+  &__ice {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    width: 346px;
+    height: 344px;
+    border-radius: 50%;
+    background-color: #ffa5ba;
+  }
+
+  &__image {
+    position: absolute;
+    top: 9px;
+    left: 117px;
+
+    // margin-left: 548px;
+    // margin-right: auto;
+
+    // &::before {
+    //   content: '';
+    //   width: 538px;
+    //   height: 538px;
+    //   border-radius: 50%;
+    //   background-color: #ffa5ba;
+    //   display: block;
+    // }
+  }
+}

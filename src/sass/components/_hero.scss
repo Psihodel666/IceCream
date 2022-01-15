@@ -3,7 +3,7 @@
 
   @media screen and (max-width: 767px) {
     overflow: hidden;
-    padding-top: 9px;
+    padding-top: 92px;
   }
 
   .container {
@@ -123,18 +123,22 @@
   }
 
   &__left-wrap-one {
+    display: none;
     @media screen and (max-width: 1279px) {
       display: none;
     }
   }
 
   &__jar-milk {
+    display: none;
   }
 
   &__left-wrap-two {
+    display: none;
   }
 
   &__text {
+    display: none;
   }
 
   &__center {

@@ -1,0 +1,13 @@
+.section-gallery {
+  background-image: linear-gradient(
+    to bottom,
+    var(--section-bg-color) 40%,
+    var(--white-txt-color) 40%
+  );
+}
+.container-gallery {
+  padding: 0;
+}
+.gallery {
+  max-width: 100%;
+}

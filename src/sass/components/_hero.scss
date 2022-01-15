@@ -1,27 +1,32 @@
 .hero {
-  img {
-    min-width: 100%;
-    display: block;
-    height: auto;
-  }
   background-color: #ffb8ca;
-  // padding-top: 92px;
-  padding-top: 9px;
-  overflow: hidden;
 
-  &__wrapper {
+  @media screen and (max-width: 767px) {
+    overflow: hidden;
+    padding-top: 9px;
+  }
+
+  .container {
     position: relative;
-    // display: flex;
-    // justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
 
   &__left {
-    position: relative;
-    z-index: 1;
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      z-index: 1;
+      top: 110px;
+      left: 20;
+    }
+  }
+
+  &__title-box {
   }
 
   &__title {
-    padding-top: 101px;
     margin-bottom: 19px;
     max-width: 218px;
 
@@ -34,19 +39,42 @@
 
     color: var(--white-txt-color);
 
+    @media screen and (min-width: 768px) {
+      max-width: 162px;
+
+      font-size: 22px;
+      line-height: 1.14;
+    }
+
+    @media screen and (min-width: 1280px) {
+      max-width: 277px;
+
+      font-size: 38px;
+      line-height: 1.16;
+    }
+
     &--red {
       font-size: 48px;
       line-height: 96.5%;
       color: var(--title-color);
+
+      @media screen and (min-width: 768px) {
+        font-size: 34px;
+        line-height: 90.5%;
+      }
+
+      @media screen and (min-width: 1280px) {
+        font-size: 58px;
+        line-height: 90.5%;
+      }
     }
   }
 
-  &__list {
+  &__left-list {
     display: flex;
-    padding-bottom: 157px;
   }
 
-  &__item:not(:last-child) {
+  &__left-item:not(:last-child) {
     margin-right: 8px;
 
     @media screen and (min-width: 1280px) {
@@ -54,7 +82,7 @@
     }
   }
 
-  &__btn--red {
+  &__left-link--red {
     padding: 7px 14px;
     background: var(--button-bg-color);
     border-radius: 20px;
@@ -64,12 +92,17 @@
     font-weight: 400;
     font-size: 8px;
     line-height: 1.25;
-    border: none;
 
     color: var(--white-txt-color);
+
+    @media screen and (min-width: 1280px) {
+      padding: 15px 23px;
+      font-size: 14px;
+      line-height: 1.29;
+    }
   }
 
-  &__btn--white {
+  &__left-link--white {
     padding: 7px 14px;
     background: var(--white-txt-color);
     border-radius: 20px;
@@ -79,48 +112,38 @@
     font-weight: 400;
     font-size: 8px;
     line-height: 1.25;
-    border: none;
 
     color: var(--button-txt-color);
+
+    @media screen and (min-width: 1280px) {
+      padding: 15px 23px;
+      font-size: 14px;
+      line-height: 1.29;
+    }
   }
 
-  //   &__bottom {
-  //     display: flex;
-  //     align-items: center;
-  //   }
+  &__left-wrap-one {
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+  }
 
-  //   &__image1 {
-  //     margin-right: 30px;
-  //   }
+  &__jar-milk {
+  }
 
-  //   &__text {
-  //     width: 200px;
-  //     margin-bottom: 20px;
+  &__left-wrap-two {
+  }
 
-  //     font-family: DM Sans;
-  //     font-style: normal;
-  //     font-weight: normal;
-  //     font-size: 14px;
-  //     line-height: 140%;
-  //     /* or 20px */
-
-  //     color: #ffffff;
-  //   }
+  &__text {
+  }
 
   &__center {
-    position: absolute;
-    top: 0px;
-    left: 34.64%;
+    position: relative;
+    z-index: 0;
 
     @media screen and (max-width: 767px) {
       left: 34.64%;
-      // left: 97px;
     }
-
-    // @media screen and (min-width: 480px) {
-    //   // left: 97px;
-    //   left: 34.64%;
-    // }
 
     @media screen and (min-width: 768px) {
       left: 344px;
@@ -131,28 +154,60 @@
     }
 
     &::before {
+      content: '';
       position: absolute;
       top: -9px;
       left: -81px;
 
-      display: block;
       width: 346px;
       height: 344px;
       border-radius: 50%;
-      content: '';
+
       background-color: #ffa5ba;
 
-      @media screen and (min-width: 768px) {
-        top: -32px;
-      }
+      // @media screen and (min-width: 768px) {
+      //   top: -32px;
+      //   left: -71px;
+      //   width: 324px;
+      //   height: 322px;
+      // }
 
-      @media screen and (min-width: 1280px) {
-        top: -56px;
-      }
+      // @media screen and (min-width: 1280px) {
+      //   top: -56px;
+      //   left: -119px;
+      //   width: 538px;
+      //   height: 538px;
+      // }
     }
   }
 
-  &__image-ice {
+  &__icecream {
     position: relative;
+  }
+
+  &__right {
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+  }
+
+  &__right-list {
+    display: none;
+  }
+
+  &__right-item {
+    display: none;
+  }
+
+  &__right-amount {
+    display: none;
+  }
+
+  &__right-text {
+    display: none;
+  }
+
+  &__girl-icecream {
+    display: none;
   }
 }

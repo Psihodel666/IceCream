@@ -1,7 +1,40 @@
 .page-header{
-   position: fixed;
-   width: 100%;
-   z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 92px;
+    z-index: 1000;
+    background-color:  #ffa5ba8f;
+
+}
+
+.header-container{
+    
+    @media screen and (min-width: 1280px){
+       position: relative;
+    
+    }
+}
+
+.wrapper-header{
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 37px;
+    }
+
+    @media screen and (min-width: 1280px){
+        position: absolute;
+        top: 37px;
+        left: 48px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+
+    }
+
     
 }
 
@@ -13,13 +46,43 @@
     
 }
 
-.site-nav-list_item{
-    margin-bottom: 23px;
+.site-nav-list {
 
-    &:last-child{
-        margin-bottom: 0;
+    @media screen and (min-width: 1280px){
+        display: flex;
+        margin: 0 110px;
+    }
+    
+}
+
+.site-nav-list_item{
+
+    @media screen and (max-width: 1279px){
+        padding: 10px 0;
+        padding-left: 21px;
+        
+        &:hover  {
+            background-color: rgb(235, 80, 119);
+            
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 
+    
+
+    @media screen and (min-width: 1280px){
+        margin-right: 35px;
+        margin-bottom: 0px;
+        padding: 10px 0;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    
 }
 
 .site-nav-list_link{
@@ -30,12 +93,24 @@
     line-height: 1.31;
     letter-spacing: 0em;
     color: var(--white-txt-color);
+    transition: color 300ms linear ;
+
+    @media screen and (min-width: 1280px){
+        font-family: DM Sans;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.31;
+        letter-spacing: 0em;
+
+        &:hover{
+            color: #D41443;
+        }
+        
+    }
     
 }
 
-.site-nav-list__link--current{
-    color: var(--title-color);
-}
+
 
 .button{
     display:block;
@@ -51,11 +126,6 @@
     
 }
 
-.header-button{
-    display: none;
-      
-}
-
 .site-nav__modal-button{
     width: 85%;
     margin: 0 auto;
@@ -64,44 +134,95 @@
     padding: 10px 0px;
     padding-left: 20px;
 
+    @media screen and (min-width: 1280px){
+
+        display: none;
+    }
+    
+}
+
+.header-button{
+    display: none;
+
+    @media screen and (min-width: 768px){
+        display: block;
+        padding: 10px 32px;
+        
+    }
+    
 }
 
 
 .site-nav__menu-container{
-    position: fixed;
-    top: 0px;
-    right: 0;
-    display: none;
-    width: 250px;
-    height: 100vh;
-    padding: 0px 21px;
-    background-color: #E17992;
-    overflow-y: scroll;
-    z-index: 1;
 
-    &.is-open{
-        display: block;
-
-        @media screen and (min-width: 1280px){
+    @media screen and  (max-width: 1279px){
         
-            display: none;
+        position: fixed;
+        top: 0px;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        background-color: #e17991;
+        overflow-y: scroll;
+        z-index: 1;
+        transform: translateX(100%);
+        transition:transform 300ms linear;
+        background-image: url(../images/header/home-pic1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx){
+            background-image: url(../images/header/home-pic1-2x.png);
+        }
+
+
+        & .site-nav__modal-button{
+            opacity: 0;
+            transition: opacity 1500ms linear;
+        }
+
+        &.is-open .site-nav__modal-button{
+            opacity: 1;
+        }
+
+        & .site-nav-list_item{
+            transform: translateX(-100%);
+            transition: transform 500ms linear;
+        }
+
+        &.is-open .site-nav-list_item{
+            transform: translateX(0);  
         }
     }
- 
+
+    @media screen and (min-width: 768px) and (max-width: 1279px){
+        width: 30%;
+        max-width: 300px;
+        
+    }
+    
+    &.is-open{
+        transform: translateX(0);  
+    }
+
 }
 
 
 .site-nav__open{
     display: inline-block;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     border: none;
     background-color: transparent;
     cursor: pointer;
     
+    @media screen and (min-width: 768px){
+        margin-left: 281px;
+    }
 
     @media screen and (min-width: 1280px){
-        
         display: none;
     }
   
@@ -112,11 +233,16 @@
     margin: 0;
     padding: 0;
     margin-left: auto;
+    margin-right: 21px;
     margin-top: 23px;
     border: none;
     background-color: transparent;
     cursor: pointer;
- 
+
+    @media screen and (min-width: 1280px){
+        display: none;
+    }
+
 }
 
 .wrapper-icon{

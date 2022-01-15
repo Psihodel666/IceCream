@@ -1,5 +1,5 @@
 .container {
-    width: 320px;
+    width: 100%;
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
@@ -9,13 +9,13 @@
     }
     @media screen and (min-width:768px){
       width: 768px;
-      padding-left: 36px;
-      padding-right: 36px;
+      padding-left: 34px;
+      padding-right: 34px;
     }
-    @media screen and (min-width:1200px){
-      width: 1200px;
-      padding-left: 46px;
-      padding-right: 46px;
+    @media screen and (min-width:1280px){
+      width: 1280px;
+      padding-left: 115px;
+      padding-right: 115px;
     } 
   }
   .is-hidden {
@@ -23,3 +23,4 @@
     opacity: 0;
     pointer-events: none;
   }
+  

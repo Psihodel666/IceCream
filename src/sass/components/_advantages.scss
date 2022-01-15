@@ -1,0 +1,88 @@
+.section-advantages{
+    background-color: var(--section-bg-color);
+}
+.advantages__item{
+    position: relative;
+    width: 230px;
+    height: 156px;
+    &:not(:last-child){
+        margin-bottom: 38px;
+    }
+    &:nth-child(1)::before{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 33px;
+        height: 50px;
+        background-image: url(../images/advantages/adv1.png);
+        background-size: cover;
+        background-color: var(--black-txt-color);
+        background-repeat: no-repeat;
+    }
+    &:nth-child(2)::before{
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-image: url(../images/advantages/adv2.png);
+        background-size: cover;
+        background-color: var(--black-txt-color);
+        background-repeat: no-repeat;
+    }
+    &:nth-child(3)::before{
+        content: '';
+        position: absolute;
+        width: 44px;
+        height: 50px;
+        background-image: url(../images/advantages/adv3.png);
+        background-size: cover;
+        background-color: var(--black-txt-color);
+        background-repeat: no-repeat;
+    }
+}
+.advantages__container{
+    position: absolute;
+    top: 66px;
+}
+.advantages__numbers{
+    font-family: Titan One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--title-color);
+    height: 56px;
+    // &::before{
+    //     content: '';
+    //     position: absolute;
+    //     top: -66px;
+    //     width: 33px;
+    //     height: 50px;
+    //     // background-image: url("../../images/advantages/adv1.png");
+    //     background-color: var(--white-txt-color);
+    //     background-repeat: no-repeat;
+    // }
+}
+.advantages__text{
+    // position: absolute;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.67;
+    color: var(--black-txt-color);
+}
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }

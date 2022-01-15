@@ -20,10 +20,17 @@ a {
   text-decoration: none;
 }
 li {
+
   list-style-type: none;
 }
-img {
-  min-width: 100%;
-  display: block;
-  height: auto;
+
+    list-style-type: none;
+  }
+  img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
+  body.modal-open{
+    overflow: hidden;
 }

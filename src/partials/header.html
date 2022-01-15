@@ -3,35 +3,35 @@
         <div class="wrapper-header ">
             <nav class="site-nav">
 
-                <a href="" class="logo">
-                    <img class="logo-images" src="./images/header/logo.png" alt="логотип сайта">
+                <a href="./index.html" class="logo">
+                    <img srcset="./images/header/logo1x.png 1x, ./images/header/logo2x.png 2x " src="./images/header/logo1x.png" alt="логотип сайта">
                 </a>
 
-                <button type="button" class="mobile-menu-button-open " data-menu-button-open>
+                <button type="button" class="site-nav__open " data-menu-button-open>
                     <svg width="20" height="20">
                         <use class="menu-button__icon-burger" href="./images/icons.svg#icon-Burger"></use>
                     </svg>
                 </button>
-
-                <div class="menu-container " data-menu>
-
-                    <button type="button" class="mobile-menu-button-close " data-menu-button-close>
+                
+                <div class="site-nav__menu-container" data-menu>
+                
+                    <button type="button" class="site-nav__close " data-menu-button-close>
                         <svg width="14" height="14">
-                            <use  href="./images/icons.svg#icon-close"></use>
+                            <use href="./images/icons.svg#icon-close"></use>
                         </svg>
                     </button>
-
-                    <button type="button" class="modal-button button">Buy now
+                
+                    <button type="button" class="site-nav__modal-button button">Buy now
                         <span class="wrapper-icon">
                             <svg width="6" height="8">
-                                <use class="menu-button__icon-menu" href="./images/icons.svg#icon-Vector-right"></use>npm run dev
+                                <use class="menu-button__icon-menu" href="./images/icons.svg#icon-Vector-right"></use>
                             </svg>
                         </span>
                     </button>
-
+                
                     <ul class="site-nav-list">
                         <li class="site-nav-list_item">
-                            <a href="" class="site-nav-list_link">Home</a>
+                            <a href="" class="site-nav-list_link site-nav-list__link--current">Home</a>
                         </li>
                         <li class="site-nav-list_item">
                             <a href="" class="site-nav-list_link">About us</a>
@@ -49,7 +49,13 @@
                 </div>
             </nav>
             <div>
-                <button type="button" class="header-button button">Buy now ></button>
+                <button type="button" class="header-button button">Buy now
+                    <span class="wrapper-icon">
+                        <svg width="6" height="8">
+                            <use class="menu-button__icon" href="./images/icons.svg#icon-Vector-right"></use>
+                        </svg>
+                    </span>
+                </button>
             </div>
         </div>
     </div>

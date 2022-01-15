@@ -28,7 +28,7 @@
     font-weight: 700;
     line-height: 1.31;
     letter-spacing: 0em;
-    color: #111010;
+    color: var(--white-txt-color);
     
 }
 
@@ -38,9 +38,9 @@
     font-weight: 700;
     line-height: 1.31;
     letter-spacing: 0em;
-    color: #D41443;
-    border: 1px solid #D41443;
-    background: rgb(255, 255, 255);
+    color: var(--button-bg-color);
+    border: 1px solid var(--button-bg-color);
+    background: var(--white-txt-color);
     border-radius: 25px;
     cursor: pointer;
     
@@ -49,6 +49,15 @@
 .header-button{
     display: none;
       
+}
+
+.modal-button{
+    width: 100%;
+    margin-top: 23px;
+    margin-bottom: 32px;
+    padding: 10px 0px;
+    padding-left: 20px;
+
 }
 
 
@@ -60,7 +69,7 @@
     width: 250px;
     height: 100vh;
     padding: 0px 21px;
-    background-color: #e17991d7;
+    background-color: #E17992;
     overflow-y: scroll;
     z-index: 1;
 

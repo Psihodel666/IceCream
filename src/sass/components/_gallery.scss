@@ -1,8 +1,8 @@
 .section-gallery {
   background-image: linear-gradient(
     to bottom,
-    var(--section-bg-color) 40%,
-    var(--white-txt-color) 40%
+    var(--section-bg-color) 65px,
+    var(--white-txt-color) 65px
   );
 }
 .container-gallery {
@@ -10,4 +10,7 @@
 }
 .gallery {
   max-width: 100%;
+}
+.section-title {
+  position: absolute;
 }

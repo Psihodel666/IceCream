@@ -1,7 +1,18 @@
 <section class="section-gallery">
-  <h2 class="is-hidden">ice cream pictures</h2>
+  <h2 class="is-hidden section-title">ice cream pictures</h2>
   <div class="container container-gallery">
     <picture>
+      <source
+        srcset="
+          ./images/gallery/mobile/gallery-web.webp    320w,
+          ./images/gallery/mobile/gallery-web@2x.webp 640w
+           ./images/gallery/tablet/gallery-web.webp      768w,
+          ./images/gallery/tablet/gallery-web@2x.webp  1536w,
+          ./images/gallery/desktop/gallery-web.webp    1278w,
+          ./images/gallery/desktop/gallery-web@2x.webp 2556w
+        "
+        type="image/webp"
+      />
       <img
         class="gallery"
         srcset="

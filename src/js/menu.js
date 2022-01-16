@@ -4,7 +4,7 @@
 
   menuBtnRef.addEventListener("click", () => {
     
-
+    document.body.classList.toggle("modal-open");
     mobileMenuRef.classList.toggle("is-open");
   });
 })();
@@ -16,7 +16,7 @@
 
   menuBtnRef.addEventListener("click", () => {
     
-    
+    document.body.classList.toggle("modal-open");
     mobileMenuRef.classList.toggle("is-open");
   });
 })();

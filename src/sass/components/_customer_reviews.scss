@@ -1,6 +1,6 @@
 .customer__reviews {
-  padding-top: 40px;
-  padding-bottom: 43px;
+  padding-top: 80px;
+  padding-bottom: 86px;
 }
 .customer__wrapper {
   background-color: #e5e5e5;
@@ -14,6 +14,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.customer__image-thumb {
+  max-width: 85px;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 29px;
 }
 .customer__review {
   padding-top: 71px;
@@ -42,6 +49,7 @@
   color: #000000;
   padding-right: 30px;
   bottom: 0;
+  z-index: 999;
 }
 .review__text::before {
   content: '';

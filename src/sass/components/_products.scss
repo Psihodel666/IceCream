@@ -139,8 +139,8 @@ background-color: #ffb8ca;
    .products__btn:focus {
     transform: rotate(-90deg);
     cursor: pointer;
-    transition: transform .25s cubic-bezier(.4,0,.2,1);
 }
+
 .products__text{
   margin-bottom: 30px;
 }

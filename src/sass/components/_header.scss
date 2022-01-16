@@ -92,6 +92,7 @@
     font-weight: 700;
     line-height: 1.31;
     letter-spacing: 0em;
+    padding: 10px 0;
     color: var(--white-txt-color);
     transition: color 300ms linear ;
 
@@ -246,6 +247,9 @@
 }
 
 .wrapper-icon{
-    margin-left: 20px;
+    margin-left: 14px;
 }
 
+.modal-button__wrapper-icon{
+    margin-left: 20px;
+}

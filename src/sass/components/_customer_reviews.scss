@@ -2,6 +2,9 @@
   padding-top: 40px;
   padding-bottom: 43px;
 }
+.customer__wrapper {
+  background-color: #e5e5e5;
+}
 .wrapper__swiper {
   width: 100%;
   height: 100%;
@@ -18,14 +21,15 @@
   padding-left: 50px;
   padding-right: 50px;
   margin-bottom: 30px;
+  background-color: #fafafa;
 }
 .review__text-thumb {
   position: relative;
-  width: 180px;
-  height: 217px;
+  width: 159px;
+  height: 239px;
   background: repeating-linear-gradient(#e1e1e1 1px, transparent 2px, transparent 31px);
+  background-position: center bottom 7px;
 }
-
 .review__text {
   position: absolute;
   text-align: center;
@@ -35,8 +39,8 @@
   font-weight: bold;
   font-size: 12px;
   line-height: 2.6;
-  padding-left: 23px;
-  padding-right: 23px;
+  color: #000000;
+  padding-right: 30px;
   bottom: 0;
 }
 .review__text::before {
@@ -52,7 +56,6 @@
   background-image: url(../images/customer-2.svg);
   background-position: center;
   background-repeat: no-repeat;
-
   z-index: -1;
 }
 
@@ -74,7 +77,6 @@
   line-height: 1.86;
 }
 .after__text {
-  background-color: #fafafa;
   height: 100px;
 }
 .customer__name::after {

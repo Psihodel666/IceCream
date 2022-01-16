@@ -1,7 +1,3 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
 @import './utils/base';
 @import './utils/colors';
 @import './utils/reset';
@@ -14,3 +10,4 @@
 @import './components/header';
 @import './components/hero';
 @import './components/products';
+@import './components/modal';

@@ -1,0 +1,98 @@
+footer{
+   background-color: #FFF5F6;
+   padding-bottom: 25px;
+}
+.footer__subtitle{
+    font-family: "Titan One";
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: var(--label-color);
+    line-height: calc(21 / 18);
+}
+.footer__text{
+    width: 232px;
+}
+.footer__title{
+    font-family: "Titan One";
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 400;
+    font-size: 34px;
+    letter-spacing: 0.04em;
+    line-height: calc(39 / 34);
+}
+.footer__wrap-icons{
+    margin-top: 50px;
+    ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+    li + li{
+        margin-left: 28.24px;
+        background: #FEA5BB;
+    }
+    li{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        position: relative;
+        svg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+    }
+    }
+    
+
+.footer__icons{}
+.footer__contact{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 46px;
+    p{
+        font-size: 12px;
+        color: #000000;
+        font-weight: 700;
+        font-family: "DM Sans";
+        line-height: 1.86;
+    }
+    a{
+        font-size: 12px;
+        color: #D41443;
+        font-weight: 500;
+        font-family: "DM Sans";
+        line-height: 1.86;
+    }
+}
+.footer_text-down{
+    margin-top: 43px;
+    padding-top: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #E1E1E1;
+    text-align: center;
+    p{
+        font-size: 14px;
+        color: #907E82;
+        font-weight: 700;
+        font-family: "DM Sans";
+        line-height: 1.52;
+    }
+    span{
+        font-size: 14px;
+        color: #907E82;
+        font-weight: 700;
+        font-family: "DM Sans";
+        line-height: 1.52;
+    }
+}

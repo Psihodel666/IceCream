@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     height: 92px;
-    z-index: 1000;
+    z-index: 10;
     background-color:  #ffa5ba8f;
 
 }
@@ -62,7 +62,7 @@
         padding-left: 21px;
         
         &:hover  {
-            background-color: rgb(235, 80, 119);
+            background-image:linear-gradient(to right, rgba(212, 20, 67, 0.6) , rgba(225, 121, 145, 0.6) );
             
         }
 
@@ -92,8 +92,16 @@
     font-weight: 700;
     line-height: 1.31;
     letter-spacing: 0em;
+    padding: 10px 0;
     color: var(--white-txt-color);
     transition: color 300ms linear ;
+
+    @media screen and (max-width: 1279px){
+        
+        &:focus{
+            color: #D41443;
+        }
+    }
 
     @media screen and (min-width: 1280px){
         font-family: DM Sans;
@@ -102,15 +110,14 @@
         line-height: 1.31;
         letter-spacing: 0em;
 
-        &:hover{
+        &:hover,
+        &:focus{
             color: #D41443;
         }
         
     }
     
 }
-
-
 
 .button{
     display:block;
@@ -231,13 +238,18 @@
 .site-nav__close{
     display: block;
     margin: 0;
-    padding: 0;
+    padding: 5px;
     margin-left: auto;
     margin-right: 21px;
-    margin-top: 23px;
+    margin-top: 13px;
     border: none;
     background-color: transparent;
     cursor: pointer;
+
+    &:hover .site-nav__close-icon{
+        transform: rotate(135deg);
+        stroke: #D41443;
+    }
 
     @media screen and (min-width: 1280px){
         display: none;
@@ -245,7 +257,16 @@
 
 }
 
-.wrapper-icon{
-    margin-left: 20px;
+.site-nav__close-icon{
+    transform: rotate(0deg); 
+    stroke:#ffffff;
+    transition: stroke 300ms linear, transform 300ms ease-in-out;
 }
 
+.wrapper-icon{
+    margin-left: 14px;
+}
+
+.modal-button__wrapper-icon{
+    margin-left: 20px;
+}

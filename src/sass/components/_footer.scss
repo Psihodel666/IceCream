@@ -1,11 +1,14 @@
 footer{
    background-color: #FFF5F6;
-   padding-bottom: 25px;
 }
 .footer_wrap{
     @media screen and (min-width:768px) {
         display: flex;
         justify-content: space-between;
+        padding-bottom: 146px;
+    }
+    @media screen and (min-width:1280px){
+        padding-bottom: 97px;
     }
 }
 
@@ -18,8 +21,12 @@ footer{
     color: var(--label-color);
     line-height: calc(21 / 18);
     @media screen and (min-width:768px) {
-       font-size: 30px;
+       font-size: 26px;
+       letter-spacing: 0.04em
     }
+    @media screen and (min-width:1280px) {
+        font-size: 30px;
+     }
 }
 .footer__text{
     width: 232px;
@@ -37,6 +44,10 @@ footer{
     line-height: calc(39 / 34);
     @media screen and (min-width:768px) {
         margin-top: 15px;
+        font-size: 48px;
+        letter-spacing: 0.06em;
+    }
+    @media screen and (min-width:768px) {
         font-size: 58px;
     }
 
@@ -67,7 +78,11 @@ footer{
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            
+            fill:#fea5bb ;
+            transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1);;
+            &:hover, &:focus{
+                fill: #D41443;
+            }
         }
     }
     }
@@ -81,6 +96,9 @@ footer{
     @media screen and (min-width:768px) {
         width: 320px;
         margin-top: 50px;
+    }
+    @media screen and (min-width:1280px) {
+        letter-spacing: 0.02em;
     }
     p{
         font-size: 12px;
@@ -106,13 +124,23 @@ footer{
     }
 }
 .footer_text-down{
-    margin-top: 43px;
+    padding-bottom: 25px;
     padding-top: 22px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-top: 1px solid #E1E1E1;
     text-align: center;
+    @media screen and (min-width:768px) {
+        flex-direction:initial;
+        justify-content: center;
+        padding-top: 29px;
+        padding-bottom: 18px;
+    }
+    @media screen and (min-width:1280px) {
+        padding-top: 9px;
+        padding-bottom: 10px;
+    }
     p{
         font-size: 14px;
         color: #907E82;
@@ -127,4 +155,5 @@ footer{
         font-family: "DM Sans";
         line-height: 1.52;
     }
+    
 }

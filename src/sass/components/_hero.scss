@@ -6,6 +6,14 @@
     padding-top: 92px;
   }
 
+  @media screen and (min-width: 768px) {
+    padding-top: 63px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 108px;
+  }
+
   .container {
     position: relative;
 
@@ -21,9 +29,23 @@
       top: 110px;
       left: 20;
     }
+
+    @media screen and (min-width: 768px) {
+      padding-top: 39px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding-top: 63px;
+    }
   }
 
   &__title-box {
+    @media screen and (min-width: 768px) {
+      margin-bottom: 19px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 56px;
+    }
   }
 
   &__title {
@@ -41,6 +63,7 @@
 
     @media screen and (min-width: 768px) {
       max-width: 162px;
+      margin-bottom: 20px;
 
       font-size: 22px;
       line-height: 1.14;
@@ -48,6 +71,7 @@
 
     @media screen and (min-width: 1280px) {
       max-width: 277px;
+      margin-bottom: 25px;
 
       font-size: 38px;
       line-height: 1.16;
@@ -84,7 +108,7 @@
 
   &__left-link--red {
     padding: 7px 14px;
-    background: var(--button-bg-color);
+    background-color: var(--button-bg-color);
     border-radius: 20px;
 
     font-family: DM Sans;
@@ -94,17 +118,23 @@
     line-height: 1.25;
 
     color: var(--white-txt-color);
+    transition: background-color 300ms linear;
 
     @media screen and (min-width: 1280px) {
       padding: 15px 23px;
       font-size: 14px;
       line-height: 1.29;
     }
+
+    &:hover,
+    &:focus {
+      background-color: var(--button-hover-bg-color);
+    }
   }
 
   &__left-link--white {
     padding: 7px 14px;
-    background: var(--white-txt-color);
+    background-color: var(--white-txt-color);
     border-radius: 20px;
 
     font-family: DM Sans;
@@ -114,47 +144,113 @@
     line-height: 1.25;
 
     color: var(--button-txt-color);
+    transition: background-color 300ms linear;
 
     @media screen and (min-width: 1280px) {
       padding: 15px 23px;
       font-size: 14px;
       line-height: 1.29;
     }
-  }
 
-  &__left-wrap-one {
-    display: none;
-    @media screen and (max-width: 1279px) {
-      display: none;
+    &:hover,
+    &:focus {
+      background-color: var(--button-two-hover-bg-color);
     }
   }
 
+  &__left-wrap-one {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+    display: flex;
+  }
+
   &__jar-milk {
-    display: none;
+    @media screen and (min-width: 1280px) {
+      position: relative;
+      left: -37px;
+    }
   }
 
   &__left-wrap-two {
-    display: none;
+    position: relative;
+    @media screen and (min-width: 768px) {
+      left: -4px;
+      top: 47px;
+    }
+    @media screen and (min-width: 1280px) {
+      left: -7px;
+      top: 56px;
+    }
   }
 
   &__text {
-    display: none;
+    max-width: 114px;
+    margin-bottom: 7px;
+
+    font-family: DM Sans;
+    font-size: 8px;
+    line-height: 1.5;
+
+    color: var(--white-txt-color);
+
+    @media screen and (min-width: 1280px) {
+      max-width: 200px;
+      margin-bottom: 20px;
+
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+    background-color: #ffffff;
+    transition: background-color 300ms linear, transform 300ms linear;
+
+    @media screen and (min-width: 1280px) {
+      width: 26px;
+      height: 26px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: rotate(360deg);
+      background-color: var(--button-two-hover-bg-color);
+    }
+  }
+
+  &__icon {
+    width: 5px;
+    height: 5px;
+    fill: var(--button-txt-color);
+
+    @media screen and (min-width: 1280px) {
+      width: 7px;
+      height: 7px;
+    }
   }
 
   &__center {
     position: relative;
-    z-index: 0;
+    // z-index: 0;
 
     @media screen and (max-width: 767px) {
       left: 34.64%;
     }
 
     @media screen and (min-width: 768px) {
-      left: 344px;
+      left: 110px;
     }
 
     @media screen and (min-width: 1280px) {
-      left: 477px;
+      left: 99px;
     }
 
     &::before {
@@ -167,21 +263,21 @@
       height: 344px;
       border-radius: 50%;
 
-      background-color: #ffa5ba;
+      background-color: var(--label-color);
 
-      // @media screen and (min-width: 768px) {
-      //   top: -32px;
-      //   left: -71px;
-      //   width: 324px;
-      //   height: 322px;
-      // }
+      @media screen and (min-width: 768px) {
+        top: -31px;
+        left: -71px;
+        width: 324px;
+        height: 322px;
+      }
 
-      // @media screen and (min-width: 1280px) {
-      //   top: -56px;
-      //   left: -119px;
-      //   width: 538px;
-      //   height: 538px;
-      // }
+      @media screen and (min-width: 1280px) {
+        top: -56px;
+        left: -119px;
+        width: 538px;
+        height: 538px;
+      }
     }
   }
 
@@ -190,28 +286,80 @@
   }
 
   &__right {
-    @media screen and (max-width: 1279px) {
+    @media screen and (max-width: 767px) {
       display: none;
+    }
+    margin-left: auto;
+    margin-top: 31px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 1;
+
+    @media screen and (min-width: 1280px) {
+      margin-top: 48px;
     }
   }
 
-  &__right-list {
-    display: none;
-  }
+  &__right-item:not(:last-child) {
+    margin-bottom: 13px;
 
-  &__right-item {
-    display: none;
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 15px;
+    }
   }
 
   &__right-amount {
-    display: none;
+    position: relative;
+    font-family: Titan One;
+    font-size: 28px;
+    line-height: 1.14;
+
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: var(--title-color);
+
+    @media screen and (min-width: 1280px) {
+      font-size: 46px;
+      line-height: 1.15;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      right: -6px;
+      top: -2px;
+
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+
+      background-color: #ffffff;
+
+      @media screen and (min-width: 1280px) {
+        width: 30px;
+        height: 30px;
+        right: -12px;
+        top: -4px;
+      }
+    }
   }
 
   &__right-text {
-    display: none;
-  }
+    font-family: DM Sans;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
 
-  &__girl-icecream {
-    display: none;
+    color: var(--white-txt-color);
+
+    @media screen and (min-width: 1280px) {
+      font-size: 14px;
+      line-height: 1.29;
+    }
   }
 }

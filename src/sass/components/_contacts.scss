@@ -318,6 +318,16 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+.contacts-menu {
+  @media screen and (min-width: 320px) {
+    background-blend-mode: multiply;
+    background-image: url(../images/contacts/ice.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #ffa5ba;
+  }
+}
 .backdrop {
   @media screen and (min-width: 768px) {
     position: fixed;
@@ -362,12 +372,22 @@
     color: var(--button-two-hover-bg-color);
   }
 }
+.close-contacts-menu {
+  background-color: rgba(0, 0, 0, 0);
+}
 .contacts-map {
   display: flex;
   justify-content: center;
 }
 .map {
-  width: 90%;
+  width: 75%;
+  height: 350px;
+  margin-top: 110px;
+  @media screen and (min-width: 768px) {
+    width: 75%;
+    height: 300px;
+    margin-top: 75px;
+  }
 }
 .modal__title {
   color: var(--black-txt-color);

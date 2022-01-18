@@ -141,6 +141,11 @@
     padding: 10px 0px;
     padding-left: 20px;
 
+    &:hover{
+        background-color: #ECEBEB;
+
+    }
+
     @media screen and (min-width: 1280px){
 
         display: none;
@@ -154,6 +159,12 @@
     @media screen and (min-width: 768px){
         display: block;
         padding: 10px 32px;
+        transition:background-color 300ms linear;
+
+        &:hover{
+            background-color: #ECEBEB;
+
+        }
         
     }
     
@@ -187,7 +198,7 @@
 
         & .site-nav__modal-button{
             opacity: 0;
-            transition: opacity 1500ms linear;
+            transition: opacity 1500ms linear , background-color 300ms linear;
         }
 
         &.is-open .site-nav__modal-button{

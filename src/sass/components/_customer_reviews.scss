@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-width: 0px;
 }
 .customer__image-thumb {
   max-width: 85px;
@@ -185,4 +186,19 @@
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 30px;
+}
+.image-slider .swiper-button-prev::after,
+.image-slider .swiper-button-next::after {
+  color: blue;
+  font-size: 80px;
+}
+.image-slider .swiper-pagination {
+  bottom: 0;
+}
+.image-slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: brown;
 }

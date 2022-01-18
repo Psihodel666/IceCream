@@ -5,21 +5,33 @@
     background-image: url(../images/about/milk-mob-1x.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 0 766px;
+    background-position: right 0px bottom 100px;
+
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx){
         background-image: url(../images/about/milk-mob-2x.png);
-      }
-}
 
-.background-image {
-    display: block;
-    width: 100vw;
-    height: 133px;
-    position: absolute;
-    top: 766px;
-    left: 0;
+      }
+
+      @media screen and (min-width:768px){
+        padding-top: 130px;
+        padding-bottom: 66px;
+        background-image: none;
+    }
+
+    @media screen and (min-width:1280px){
+        padding-top: 125px;
+        padding-bottom: 39px;
+        background-image: url(../images/about/milk-desktop-1x.png);
+        background-position: 0 342px;
+        
+        @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx){
+        background-image: url(../images/about/milk-desktop-2x.png);
+      }
+    }
 }
 
 .section-about__label {
@@ -30,6 +42,19 @@
     text-transform: uppercase;
     color: var(--label-color);
     margin-bottom: 15px;
+
+    @media screen and (min-width:768px){
+        font-size: 26px;
+        line-height: 1.15;
+        margin-bottom: 16px;
+    }
+
+    @media screen and (min-width:1280px){
+        font-size: 30px;
+        line-height: 1.13;
+        letter-spacing: 0.04em;
+        margin-bottom: 15px;
+    }
 }
 
 .section-about__title {
@@ -41,13 +66,33 @@
     text-transform: uppercase;
     color: var(--button-txt-color);
     margin-bottom: 26px;
+
+    @media screen and (min-width:768px){
+        font-size: 48px;
+        margin-bottom: 50px;
+    }
+
+    @media screen and (min-width:1280px) {
+        font-size: 58px;
+        letter-spacing: 0.06em;
+    }
 }
 
 .section-about__img {
-    max-width: 100%;
-    height: auto;
-    display: block;
     margin-bottom: 46px;
+
+    @media screen and (max-width:767px){
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width:768px) {
+        margin-bottom: 0;
+    }
+}
+
+.container-img{
+    flex-shrink: 0;
 }
 
 .section-about__text {
@@ -56,16 +101,49 @@
     font-size: 12px;
     line-height: 1.58;
     margin: 0 30px;
+
+    @media screen and (min-width:768px) {
+        font-size: 14px;
+        line-height: 1.78;
+        margin-bottom: 0;
+        margin: 0;
+    }
 }
 
 .section-about__first-text {
     color: var(--black-txt-color);
     margin-bottom: 47px;
+
+    @media screen and (min-width:768px){
+        margin-bottom: 26px;
+        margin-left: 17px;
+    }
+
+    @media screen and (min-width:1280px){
+        font-size: 16px;
+        line-height: 1.75;
+        letter-spacing: 0.04em;
+        margin-bottom: 35px;
+        margin-left: 74px;
+    }
 }
 
 .section-about__second-text {
     color: var(--grey-txt-color);
     margin-bottom: 17px;
+
+    @media screen and (min-width:768px){
+        margin-bottom: 62px;
+        margin-left: 17px;
+    }
+
+    @media screen and (min-width:1280px){
+        font-size: 14px;
+        line-height: 1.94;
+        letter-spacing: 0.04em;
+        margin-bottom: 45px;
+        margin-left: 74px;
+    }
 }
 
 .section-about__btn {
@@ -87,8 +165,108 @@
     &:hover {
 background-color: var(--button-two-hover-bg-color);
     }
+    @media screen and (min-width:768px){
+        margin-left: 17px;
+        font-size: 16px;
+        line-height: 1.31;
+    }
+
+    @media screen and (min-width:1280px){
+        margin-left: 74px;
+    }
 }
 
 .section-about__btn-icon {
     margin-left: 14px;
+}
+
+.container-img-text {
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
+}
+
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  
+    opacity: 1;
+    z-index: 1000;
+    transition: opacity 500ms linear;
+    overflow: scroll;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 98%;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 450px;
+    background-image: linear-gradient(to left bottom, rgba(255, 184, 202, 1), rgba(255, 245, 246, 1));
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transform: translate(-50%, -50%);
+    transition: transform 2500ms linear;
+
+    overflow: scroll;
+    
+   
+}
+
+.modal-text {
+    font-family: DM Sans;
+font-weight: 500;
+font-size: 12px;
+line-height: 1.62;
+color: var(--black-txt-color);
+margin-bottom: 30px;
+background-image: url(../images/about/jug-of-milk-1x.png);
+background-repeat: no-repeat;
+background-position: left bottom;
+
+@media screen and (min-width:768px){
+background-size: contain;
+font-size: 14px;
+line-height: 1.76;
+}
+@media screen and (min-width:1280px){
+line-height: 1.94;
+}
+}
+
+
+.modal-close-btn {
+    display: block;
+    padding: 0;
+    border: none;
+    background: var(--white-txt-color);
+    border-radius: 22px;
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.29;
+    color: var(--button-txt-color);
+    min-width: 176px;
+    height: 44px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+background-color: var(--button-two-hover-bg-color);
+    }
+
+    margin: 0 auto;
+
+    @media screen and (min-width:768px){
+        font-size: 16px;
+        line-height: 1.31;
+        font-weight: 500;
+    }
 }

@@ -9,6 +9,8 @@
     refs.closeFranchiseMenu.addEventListener('click', toggleMenu);
 
     function toggleMenu() {
+        document.body.classList.toggle("modal-open");
         refs.menu.classList.toggle('is-hidden');
     }
 })();
+

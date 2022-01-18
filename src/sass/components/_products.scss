@@ -214,6 +214,8 @@
   color: var(--white-txt-color);
   padding-left: 40px;
   padding-right: 40px;
+  transform: translateX(0);
+  transition-duration: 250ms linear;
 
   @media screen and (min-width: 768px){
   font-size: 14px;
@@ -228,6 +230,7 @@
   padding-right: 44px;
   }
 }
+
 .products-icons {
   width: 10px;
   height: 11px;
@@ -239,34 +242,38 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--white-txt-color);
   border: 1px var(--white-txt-color);
-  transform: rotate(0);
-  transition-property: opasity, transition-duration, transition-timing-function;
-  transition-duration: 25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 .products__btn:hover {
   transform: rotate(-90deg);
   cursor: pointer;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: rotate transform 500ms linear ;
 }
+
 .products__text {
   margin-bottom: 30px;
+transition-timing-function:  cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 5000ms;
 }
 .products__text-button {
   margin-top: 30px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 .products__item {
   padding-bottom: 45px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 5000ms;
 }
 .products__checkbox {
   margin-top: 150px;
   position: absolute;
 }
+
 .shadow__btn:hover,
 .shadow__btn:focus {
   filter: drop-shadow(-4px 2px 4px rgba(34, 60, 80, 0.24));

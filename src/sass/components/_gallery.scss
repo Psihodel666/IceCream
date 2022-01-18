@@ -12,9 +12,11 @@
     padding-top: 72px;
     padding-bottom: 62px;
   }
+
+  cursor:pointer
 }
 
-.gallery-thumb {
+.gallery-box {
   display: flex;
 
   justify-content: center;
@@ -29,7 +31,7 @@
   }
 }
 
-.gallery-column {
+.gallery-block {
   flex-basis: calc((100% - 7 * 2px) / 7);
   margin-left: 1px;
   margin-right: 1px;
@@ -46,7 +48,7 @@
     margin-right: 6px;
   }
 
-  &.is-big {
+  &.big {
     flex-basis: calc((100% - 7 * 2px) / 7 * 2);
 
     @media screen and(min-width:768px) {
@@ -58,7 +60,7 @@
     }
   }
 
-  &.is-down {
+  &.down {
     position: relative;
     top: 3px;
 
@@ -71,7 +73,7 @@
     }
   }
 
-  &.is-up {
+  &.up {
     position: relative;
     bottom: 10px;
 
@@ -85,7 +87,12 @@
   }
 }
 
-.gallery-row {
+
+
+
+
+
+.gallery-line {
   display: flex;
   align-items: flex-start;
 
@@ -99,23 +106,40 @@
     margin-bottom: 12px;
   }
 
-  &.is-small {
+  &.little {
     width: 50%;
   }
 }
 
-.picture-wrapper {
+
+.image-skin {
   border-radius: 10px;
   overflow: hidden;
 }
 
-.picture-wrapper {
-  transform: scale(100%);
+.image-skin {
+  @keyframes bounce {
 
-  z-index: 0;
+    0%,
+    20%,
+    60%,
+    100% {
+      transform: translateY(0);
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+
+    80% {
+      transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+  }
 }
 
-.picture-wrapper:hover {
-  transform: scale(120%);
-  z-index: 1;
+.image-skin:hover {
+  animation: bounce 1s;
 }

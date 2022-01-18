@@ -205,7 +205,7 @@ background-color: var(--button-two-hover-bg-color);
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 98%;
+    width: 95vw;
     padding: 30px;
     border-radius: 20px;
     max-width: 450px;
@@ -217,8 +217,12 @@ background-color: var(--button-two-hover-bg-color);
     transition: transform 2500ms linear;
 
     overflow: scroll;
-    
-   
+    @media screen and (min-width:768px){
+        min-width: 700px;
+    }
+    @media screen and (min-width:1280px){
+        min-width: 1000px;
+    }
 }
 
 .modal-text {
@@ -226,7 +230,7 @@ background-color: var(--button-two-hover-bg-color);
 font-weight: 500;
 font-size: 12px;
 line-height: 1.62;
-color: var(--black-txt-color);
+color: var(--grey-txt-color);
 margin-bottom: 30px;
 background-image: url(../images/about/jug-of-milk-1x.png);
 background-repeat: no-repeat;
@@ -241,7 +245,6 @@ line-height: 1.76;
 line-height: 1.94;
 }
 }
-
 
 .modal-close-btn {
     display: block;
@@ -269,4 +272,14 @@ background-color: var(--button-two-hover-bg-color);
         line-height: 1.31;
         font-weight: 500;
     }
+}
+
+.modal-title {
+    font-family: Titan One;
+font-size: 24px;
+line-height: 1.15;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: var(--button-txt-color);
+margin-bottom: 20px;
 }

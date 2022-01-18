@@ -1,16 +1,145 @@
-.section-gallery {
-  background-image: linear-gradient(
-    to bottom,
-    var(--section-bg-color) 65px,
-    var(--white-txt-color) 65px
-  );
-}
-.container-gallery {
-  padding: 0;
-}
 .gallery {
-  max-width: 100%;
+  padding-top: 49px;
+  padding-bottom: 40px;
+  background-image: linear-gradient(var(--section-bg-color)45%, var(--white-txt-color)45%);
+
+  @media screen and (min-width: 768px) {
+    padding-top: 70px;
+    padding-bottom: 61px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 72px;
+    padding-bottom: 62px;
+  }
+
+  cursor:pointer
 }
-.section-title {
-  position: absolute;
+
+.gallery-box {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -1px;
+
+  @media screen and(min-width:768px) {
+    margin-right: auto;
+    margin-left: auto;
+    margin: -4px;
+  }
+}
+
+.gallery-block {
+  flex-basis: calc((100% - 7 * 2px) / 7);
+  margin-left: 1px;
+  margin-right: 1px;
+
+  @media screen and(min-width:768px) {
+    flex-basis: calc((100% - 7 * 8px) / 7);
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  @media screen and(min-width:1280px) {
+    flex-basis: calc((100% - 7 * 12px) / 7);
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  &.big {
+    flex-basis: calc((100% - 7 * 2px) / 7 * 2);
+
+    @media screen and(min-width:768px) {
+      flex-basis: calc((100% - 7 * 8px) / 7 * 2);
+    }
+
+    @media screen and(min-width:1280px) {
+      flex-basis: calc((100% - 7 * 12px) / 7 * 2);
+    }
+  }
+
+  &.down {
+    position: relative;
+    top: 3px;
+
+    @media screen and(min-width:768px) {
+      top: 9px;
+    }
+
+    @media screen and(min-width:1280px) {
+      top: 17px;
+    }
+  }
+
+  &.up {
+    position: relative;
+    bottom: 10px;
+
+    @media screen and(min-width:768px) {
+      bottom: 20px;
+    }
+
+    @media screen and(min-width:1280px) {
+      bottom: 34px;
+    }
+  }
+}
+
+
+
+
+
+
+.gallery-line {
+  display: flex;
+  align-items: flex-start;
+
+  margin-bottom: 2px;
+
+  @media screen and(min-width:768px) {
+    margin-bottom: 8px;
+  }
+
+  @media screen and(min-width:1280px) {
+    margin-bottom: 12px;
+  }
+
+  &.little {
+    width: 50%;
+  }
+}
+
+
+.image-skin {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-skin {
+  @keyframes bounce {
+
+    0%,
+    20%,
+    60%,
+    100% {
+      transform: translateY(0);
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+
+    80% {
+      transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.image-skin:hover {
+  animation: bounce 1s;
 }

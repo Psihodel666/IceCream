@@ -247,12 +247,14 @@
   margin-right: auto;
   background-color: var(--white-txt-color);
   border: 1px var(--white-txt-color);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ transition: 250ms;
  
 }
 .products__btn:hover {
   transform: rotate(-90deg);
   cursor: pointer;
-  transition: rotate transform 500ms linear ;
+  transition: 250ms;
 }
 
 .products__text {

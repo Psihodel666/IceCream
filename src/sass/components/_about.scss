@@ -1,9 +1,4 @@
 .section-about {
-    @media screen and (max-width:767px) {
-        .container {
-      max-width: 320px;
-    }
-    }
     padding-top: 125px;
     padding-bottom: 39px;
     background-color:var(--section-bg-color);
@@ -86,9 +81,13 @@
 .section-about__img {
     margin-bottom: 46px;
 
+    @media screen and (max-width:767px){
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     @media screen and (min-width:768px) {
         margin-bottom: 0;
-        
     }
 }
 
@@ -117,7 +116,7 @@
 
     @media screen and (min-width:768px){
         margin-bottom: 26px;
-        margin-left: 23px;
+        margin-left: 17px;
     }
 
     @media screen and (min-width:1280px){
@@ -184,5 +183,90 @@ background-color: var(--button-two-hover-bg-color);
 .container-img-text {
     @media screen and (min-width:768px) {
         display: flex;
+    }
+}
+
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  
+    opacity: 1;
+    z-index: 1000;
+    transition: opacity 500ms linear;
+    overflow: scroll;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 98%;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 450px;
+    background-image: linear-gradient(to left bottom, rgba(255, 184, 202, 1), rgba(255, 245, 246, 1));
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transform: translate(-50%, -50%);
+    transition: transform 2500ms linear;
+
+    overflow: scroll;
+    
+   
+}
+
+.modal-text {
+    font-family: DM Sans;
+font-weight: 500;
+font-size: 12px;
+line-height: 1.62;
+color: var(--black-txt-color);
+margin-bottom: 30px;
+background-image: url(../images/about/jug-of-milk-1x.png);
+background-repeat: no-repeat;
+background-position: left bottom;
+
+@media screen and (min-width:768px){
+background-size: contain;
+font-size: 14px;
+line-height: 1.76;
+}
+@media screen and (min-width:1280px){
+line-height: 1.94;
+}
+}
+
+
+.modal-close-btn {
+    display: block;
+    padding: 0;
+    border: none;
+    background: var(--white-txt-color);
+    border-radius: 22px;
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.29;
+    color: var(--button-txt-color);
+    min-width: 176px;
+    height: 44px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+background-color: var(--button-two-hover-bg-color);
+    }
+
+    margin: 0 auto;
+
+    @media screen and (min-width:768px){
+        font-size: 16px;
+        line-height: 1.31;
+        font-weight: 500;
     }
 }

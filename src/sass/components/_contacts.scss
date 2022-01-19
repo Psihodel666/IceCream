@@ -153,8 +153,8 @@
   font-weight: 500;
   margin-bottom: 25px;
   color: var(--grey-txt-color);
-  @media screen and (max-width: 767px) {
-    width: 179px;
+  @media screen and (max-width: 480px) {
+    // width: 179px;
   }
   @media screen and (min-width: 768px) {
     font-size: 14px;
@@ -298,8 +298,6 @@
   height: 100vh;
   top: 0;
   z-index: 200;
-
-
   opacity: 1;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16), 0px 2px 4px 0px rgba(0, 0, 0, 0.08),
     0px 4px 8px 0px rgba(0, 0, 0, 0.04);
@@ -307,8 +305,8 @@
   transition-property: transform, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  @media screen and (max-width: 767px) {
-    height: calc(100% - 100px);
+  @media screen and (max-width: 480px) {
+    // height: calc(100% - 100px);
     max-width: 480px;
     top: 50%;
     left: 50%;
@@ -325,6 +323,15 @@
     transition-property: transform, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.franchise-center {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 80%;
   }
 }
 .contacts-menu {
@@ -392,7 +399,7 @@
 .map {
   width: 75%;
   height: 350px;
-  margin-top: 50px;
+  margin-top: 110px;
   @media screen and (min-width: 768px) {
     width: 75%;
     height: 300px;
@@ -401,13 +408,14 @@
 }
 
 .modal__title {
+  align-items: center;
   color: var(--black-txt-color);
   font-family: Dm sans, sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.83;
   letter-spacing: 0.03em;
-  padding-top: 0;
+  padding-top: 0px;
   padding-bottom: 12px;
   @media screen and (max-width: 767px) {
     width: 280px;

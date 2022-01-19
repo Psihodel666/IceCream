@@ -1,19 +1,19 @@
 .contacts-bg {
-  background-image: linear-gradient(to bottom, #e5e5e5 84px, #fff5f6 84px);
+  background-image: linear-gradient(to bottom, #ffffff 84px, #fff5f6 84px);
   background-repeat: no-repeat;
   background-position: center;
   @media screen and (min-width: 768px) {
-    background-image: linear-gradient(to bottom, #e5e5e5 78px, #fff5f6 78px);
+    background-image: linear-gradient(to bottom, #ffffff 78px, #fff5f6 78px);
   }
   @media screen and (min-width: 1280px) {
     background-size: contain;
     background-position: 0% 20%;
     min-width: 1280px;
     background-image: url(../images/contacts/sectionbg.png),
-      linear-gradient(to bottom, #e5e5e5 102px, #fff5f6 102px);
+      linear-gradient(to bottom, #ffffff 102px, #fff5f6 102px);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/contacts/sectionbg-2x.png),
-        linear-gradient(to bottom, #e5e5e5 102px, #fff5f6 102px);
+        linear-gradient(to bottom, #ffffff 102px, #fff5f6 102px);
     }
   }
 }
@@ -49,7 +49,6 @@
   }
 }
 .box {
-  width: 220px;
   border-radius: 24px;
   padding-top: 43px;
   padding-right: 21px;
@@ -57,6 +56,12 @@
   padding-left: 20px;
   background-color: var(--white-txt-color);
   box-shadow: 0px 8px 30px 0px #d414431a;
+  @media screen and (max-width: 479px) {
+    width: calc(100% - 40px);
+  }
+  @media screen and (min-width: 480px) {
+    width: 220px;
+  }
   @media screen and (min-width: 768px) {
     padding-top: 50px;
     padding-right: 32px;
@@ -151,6 +156,9 @@
   font-weight: 500;
   margin-bottom: 25px;
   color: var(--grey-txt-color);
+  @media screen and (max-width: 480px) {
+    // width: 179px;
+  }
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.64;
@@ -289,14 +297,13 @@
 .franchise-menu {
   position: fixed;
   background-color: var(--section-bg-color);
+  // max-width: 480px;
   width: 100vw;
   height: 100vh;
-  top: 0;
-  z-index: 20;
-  // padding-top: 10px;
-  // padding-bottom: 48px;
-  // padding-left: 40px;
-
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 99200;
   opacity: 1;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16), 0px 2px 4px 0px rgba(0, 0, 0, 0.08),
     0px 4px 8px 0px rgba(0, 0, 0, 0.04);
@@ -318,8 +325,29 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+.franchise-menu {
+  @media screen and (max-width: 767px) {
+    // height: calc(100% - 100px);
+
+    max-width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.franchise-center {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 80%;
+  }
+}
 .contacts-menu {
   @media screen and (min-width: 320px) {
+    // width: 100vh;
+    // height: 100vh;
     background-blend-mode: multiply;
     background-image: url(../images/contacts/ice.png);
     background-repeat: no-repeat;
@@ -335,7 +363,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 20;
+    z-index: 99200;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -375,6 +403,7 @@
 .close-contacts-menu {
   background-color: rgba(0, 0, 0, 0);
 }
+
 .contacts-map {
   display: flex;
   justify-content: center;
@@ -382,25 +411,34 @@
 .map {
   width: 75%;
   height: 350px;
-  margin-top: 110px;
+  margin-top: 100px;
   @media screen and (min-width: 768px) {
     width: 75%;
     height: 300px;
     margin-top: 75px;
   }
 }
+
 .modal__title {
+  align-items: center;
   color: var(--black-txt-color);
   font-family: Dm sans, sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.83;
   letter-spacing: 0.03em;
-  padding: 0px 40px 12px 40px;
-  margin: 0;
+  padding-top: 0px;
+  padding-bottom: 12px;
+  @media screen and (max-width: 767px) {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   @media screen and (min-width: 768px) {
     font-size: 16px;
     line-height: 1.85;
+    padding: 0px 40px 12px 40px;
+    margin: 0;
   }
 }
 .modal__icon {

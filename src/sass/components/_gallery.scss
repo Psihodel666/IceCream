@@ -16,7 +16,7 @@
   cursor:pointer
 }
 
-.gallery-box {
+.gallery__box {
   display: flex;
 
   justify-content: center;
@@ -31,7 +31,7 @@
   }
 }
 
-.gallery-block {
+.gallery__block {
   flex-basis: calc((100% - 7 * 2px) / 7);
   margin-left: 1px;
   margin-right: 1px;
@@ -87,12 +87,7 @@
   }
 }
 
-
-
-
-
-
-.gallery-line {
+.gallery__line {
   display: flex;
   align-items: flex-start;
 
@@ -112,12 +107,12 @@
 }
 
 
-.image-skin {
+.image__skin {
   border-radius: 10px;
   overflow: hidden;
 }
 
-.image-skin {
+.image__skin {
   @keyframes bounce {
 
     0%,
@@ -140,6 +135,6 @@
   }
 }
 
-.image-skin:hover {
+.image__skin:hover {
   animation: bounce 1s;
 }

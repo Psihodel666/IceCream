@@ -49,8 +49,6 @@
   }
 }
 .box {
-  width: calc(100% - 40px);
-
   border-radius: 24px;
   padding-top: 43px;
   padding-right: 21px;
@@ -58,9 +56,10 @@
   padding-left: 20px;
   background-color: var(--white-txt-color);
   box-shadow: 0px 8px 30px 0px #d414431a;
-
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     width: 220px;
+  }
+  @media screen and (min-width: 768px) {
     padding-top: 50px;
     padding-right: 32px;
     padding-bottom: 50px;
@@ -295,12 +294,13 @@
 .franchise-menu {
   position: fixed;
   background-color: var(--section-bg-color);
-  max-width: 480px;
+  // max-width: 480px;
+  width: 100vw;
   height: 100vh;
   transform: translate(-50%, -50%);
-  top: 0;
+  top: 50%;
   left: 50%;
-  z-index: 200;
+  z-index: 99200;
   opacity: 1;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16), 0px 2px 4px 0px rgba(0, 0, 0, 0.08),
     0px 4px 8px 0px rgba(0, 0, 0, 0.04);
@@ -308,14 +308,7 @@
   transition-property: transform, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  @media screen and (max-width: 767px) {
-    // height: calc(100% - 100px);
 
-    max-width: 100vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
   @media screen and (min-width: 768px) {
     position: absolute;
     width: 528px;
@@ -329,6 +322,16 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+.franchise-menu {
+  @media screen and (max-width: 767px) {
+    // height: calc(100% - 100px);
+
+    max-width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 .franchise-center {
   @media screen and (max-width: 767px) {
     display: flex;
@@ -340,6 +343,8 @@
 }
 .contacts-menu {
   @media screen and (min-width: 320px) {
+    // width: 100vh;
+    // height: 100vh;
     background-blend-mode: multiply;
     background-image: url(../images/contacts/ice.png);
     background-repeat: no-repeat;
@@ -355,7 +360,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 200;
+    z-index: 99200;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -403,7 +408,7 @@
 .map {
   width: 75%;
   height: 350px;
-  margin-top: 20px;
+  margin-top: 100px;
   @media screen and (min-width: 768px) {
     width: 75%;
     height: 300px;

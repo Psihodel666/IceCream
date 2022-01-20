@@ -20,3 +20,29 @@
     mobileMenuRef.classList.toggle("is-open");
   });
 })();
+
+
+
+
+
+
+(() => {
+    const openedModalBtn = document.querySelector('[data-modal-opened]');
+    const modals = document.querySelector('[data-modal-header]');
+
+    openedModalBtn.addEventListener("click", () => {
+        
+        modals.classList.toggle("invisible");
+    });
+})();
+
+
+(() => {
+    const closedModalBtn = document.querySelector('[data-modal-closed]');
+    const modals = document.querySelector('[data-modal-header]');
+
+    closedModalBtn.addEventListener("click", () => {
+        
+        modals.classList.toggle("invisible");
+    });
+})();

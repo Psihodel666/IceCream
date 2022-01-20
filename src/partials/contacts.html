@@ -78,7 +78,7 @@
                 </div>
                 <ul class="btn-list">
                     <li class="btn-list__item">
-                        <button type="button" class="btn-contacts" open-contacts-menu>
+                        <button type="button" class="btn-contacts" data-contacts-open>
                             <span>Our Locations</span>
                             <svg width="12px" height="8px" class="btn-contacts__icon">
                                 <use href="./images/icons.svg#vector-1"></use>
@@ -86,7 +86,7 @@
                         </button>
                     </li>
                     <li class="btn-list__item">
-                        <button type="button" class="btn-contacts btn-contacts--secondary" open-franchise-menu>
+                        <button type="button" class="btn-contacts btn-contacts--secondary" data-franchise-open>
                             <span>Franchise</span>
                             <svg width="12px" height="8px" class="btn-contacts__icon">
                                 <use href="./images/icons.svg#vector-2"></use>
@@ -95,9 +95,9 @@
                     </li>
                 </ul>
     </div>
-        <div class="backdrop is-hidden" contacts-menu>
+        <div class="backdrop is-hidden" data-contacts>
             <div class="contacts-menu">
-                <button class="close-contacts-menu" close-contacts-menu>
+                <button class="close-contacts-menu"  data-contacts-close>
                     <svg class="contacts-icon" width="40" height="40">
                         <use href="./images/icons.svg#close"></use>
                     </svg></button>
@@ -108,9 +108,9 @@
                     </div>
             </div>
         </div>
-        <div class="backdrop is-hidden" franchise-menu>
+        <div class="backdrop is-hidden" data-franchise>
             <div class="franchise-menu">
-                <button class="close-contacts-menu" close-franchise-menu>
+                <button class="close-contacts-menu" data-franchise-close>
                     <svg class="contacts-icon" width="40" height="40">
                         <use href="./images/icons.svg#close"></use>
                     </svg></button> 
@@ -121,7 +121,7 @@ the right track with IceCrema.</h2>
         <div class="form__box">
         <span class="form__field">Name</span>
         <label class="form__label">
-        <input type="text" class="form__input" name="name" id="name" placeholder=" ">
+        <input type="text" class="form__input" name="name" id="name" placeholder="">
         <svg class="form__icon" width="18" height="18">
         <use href="./images/icons.svg#person-black"></use>
         </svg>
@@ -130,7 +130,7 @@ the right track with IceCrema.</h2>
         <div class="form__box">
         <span class="form__field">Phone number</span>
         <label class="form__label">
-        <input type="tel" class="form__input" name="tel" id="tel" placeholder=" ">
+        <input type="tel" class="form__input" name="tel" id="tel" placeholder="">
         <svg class="form__icon" width="18" height="18">
             <use href="./images/icons.svg#phone-black"></use>
         </svg>
@@ -139,7 +139,7 @@ the right track with IceCrema.</h2>
         <div class="form__box">
         <span class="form__field">E-mail</span>
         <label class="form__label">
-        <input type="email" class="form__input" name="email" id="email" placeholder=" ">
+        <input type="email" class="form__input" name="email" id="email" placeholder="">
         <svg class="form__icon" width="18" height="18">
         <use href="./images/icons.svg#email-black"></use>
         </svg>
@@ -148,7 +148,7 @@ the right track with IceCrema.</h2>
         <div class="form__box">
         <span class="form__field">Contry</span>
         <label class="form__label">
-        <input type="email" class="form__input" name="email" id="email" placeholder=" ">
+        <input type="text" class="form__input" name="text" id="text" placeholder="">
         <svg class="form__icon" width="18" height="18">
             <use href="./images/icons.svg#location2"></use>
         </svg>

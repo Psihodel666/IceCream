@@ -1,9 +1,9 @@
 
 (() => {
     const refs = {
-        openContactsMenu: document.querySelector('[open-contacts-menu]'),
-        closeContactsMenu: document.querySelector('[close-contacts-menu]'),
-        menu: document.querySelector('[contacts-menu]'),
+        openContactsMenu: document.querySelector('[data-contacts-open]'),
+        closeContactsMenu: document.querySelector('[data-contacts-close]'),
+        menu: document.querySelector('[data-contacts]'),
     };
     refs.openContactsMenu.addEventListener('click', toggleMenu);
     refs.closeContactsMenu.addEventListener('click', toggleMenu);

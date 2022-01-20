@@ -1,10 +1,10 @@
 (() => {
     const refs = {
-        openFranchiseMenu: document.querySelector('[open-franchise-menu]'),
+        openFranchiseMenu: document.querySelector('[data-franchise-open]'),
         openDesctopModal: document.querySelector('[data-desctop-modal]'),
         openMobileModal: document.querySelector('[data-mobile-modal]'),
-        closeFranchiseMenu: document.querySelector('[close-franchise-menu]'),
-        menu: document.querySelector('[franchise-menu]'),
+        closeFranchiseMenu: document.querySelector('[data-franchise-close]'),
+        menu: document.querySelector('[data-franchise]'),
     };
 
     refs.openFranchiseMenu.addEventListener('click', toggleMenu);
